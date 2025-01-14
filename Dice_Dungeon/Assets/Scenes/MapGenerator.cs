@@ -68,6 +68,16 @@ public class MapGenerator : MonoBehaviour
                 break;
             }
         }
+        while (true)
+        {
+            int Xrnd = random.Next(10);
+            int Yrnd = random.Next(10);
+            if (board[Xrnd][Yrnd] == 1)
+            {
+                board[Xrnd][Yrnd] = 5;
+                break;
+            }
+        }
         printBoard();
         for (int i = 0; i < board.Length; i++)
         {
